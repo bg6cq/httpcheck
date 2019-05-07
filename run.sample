@@ -1,11 +1,16 @@
 #!/bin/bash
 
 DEBUG=1
-SITE=ustc
+
+#请把SITE改为自己的缩写，会存入influxdb，建议用学校域名缩写，如ustc, pku 等
+SITE=your_site
+
+export DEBUG
+export SITE
 
 while true; do
-
+	date
 	bash runhttpcheck.sh
-
+	echo sleep 60
 	sleep 60
 done
