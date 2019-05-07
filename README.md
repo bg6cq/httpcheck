@@ -18,9 +18,9 @@
 
 ### SITE 安装步骤
 
-1. 创建一个独立的用户，专门用于运行测试程序
+#### 1. 创建一个独立的用户，专门用于运行测试程序
 
-2. 以该用户的身份，执行`gpg --gen-key`命令生成gpg密钥
+#### 2. 以该用户的身份，执行`gpg --gen-key`命令生成gpg密钥
 
 注意：为了工作方便，提示输入私钥密码时，请输入2次回车，不使用密码。这也是使用一个独立用户运行测试的原因。
 
@@ -81,7 +81,7 @@ the OS a chance to collect more entropy! (Need 189 more bytes)
 
 命令执行完毕后，执行 `gpg --export --armor` 导出公钥，发给  james@ustc.edu.cn 以便放到ipv6.ustc.edu.cn上用于验证签名。
 
-3. 执行以下命令安装程序
+#### 3. 执行以下命令安装程序
 
 ```
 cd
@@ -98,14 +98,16 @@ vi run.sh
 
 如果make 出现错误，请用root执行`yum -y install git curl gcc openssl-devel`之类的命令安装gcc，openssl-devel等。
 
-4. 执行 run.sh 
+#### 4. 执行 run.sh 
+
+开始测试
 
 
 ### 查看结果
 
 发送公钥后，会获得一个用户名和密码，使用该用户名和密码，可以登录 http://202.38.95.107:3000 查看结果，也可以在上面建立自己的dashboard。
 
-5. 添加修改要监测的网站和url
+### 添加修改要监测的网站和url
 
 请fork后修改urls.txt或按照以下格式把信息发给我，我来改。
 
