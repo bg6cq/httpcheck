@@ -79,15 +79,16 @@ the OS a chance to collect more entropy! (Need 189 more bytes)
 
 最后一步可能需要等一段时间以生成密钥。
 
-命令执行完毕后，执行 gpg --export-keys --armor 导出公钥，发给  james@ustc.edu.cn 以便放到ipv6.ustc.edu.cn上用于验证签名。
+命令执行完毕后，执行 `gpg --export --armor` 导出公钥，发给  james@ustc.edu.cn 以便放到ipv6.ustc.edu.cn上用于验证签名。
 
 3. 执行以下命令安装程序
 
 ```
 cd
 git clone --recursive https://github.com/bg6cq/httpcheck.git
-cd httptest
+cd httpcheck/httptest
 make
+cd ..
 cp run.sample run.sh
 
 vi run.sh
