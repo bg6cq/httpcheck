@@ -1,0 +1,3 @@
+[submodule "httptest"]
+	path = httptest
+	url = https://github.com/bg6cq/httptest.git

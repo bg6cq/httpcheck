@@ -1,0 +1,10 @@
+#!/bin/bash
+
+DEBUG=1
+SITE=ustc
+
+while true; do
+
+	bash runhttpcheck.sh
+
+sleep 60
