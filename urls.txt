@@ -8,6 +8,6 @@ www.fudan.edu.cn http://www.fudan.edu.cn/files/slider/1920/1457.jpg
 www.hit.edu.cn http://www.hit.edu.cn/_upload/article/images/1d/a3/a4fadc444265acc4d52187808806/856dadb5-1dc8-472a-a656-dbf5a575e8b4.jpg
 www.nju.edu.cn https://www.nju.edu.cn/_upload/article/images/6e/50/94c71d314c6ab0d168e3eace12bd/6bd7e24e-9126-459c-9558-d2d46ce4d0cb.jpg
 www.xjtu.edu.cn http://www.xjtu.edu.cn/images/14/12/11/1tf5znre9c/20190506011.jpg
-www.xcvtc.edu.cn https://www.xcvtc.edu.cn/
-www.zs.xcvtc.edu.cn https://www.zs.xcvtc.edu.cn/
+www.xcvtc.edu.cn https://www.xcvtc.edu.cn/u/cms/www/201707/04164746csmp.jpg
+www.zs.xcvtc.edu.cn https://www.zs.xcvtc.edu.cn/images/banner.jpg
 www.hefei.gov.cn http://www.hefei.gov.cn/
