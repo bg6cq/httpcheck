@@ -100,8 +100,24 @@ vi run.sh
 
 #### 4. 执行 run.sh 
 
-开始测试
+运行run.sh 开始测试。
 
+我使用的run.sh如下，运行方式是`screen bash run.sh`。
+```
+#!/bin/bash
+
+DEBUG=1
+SITE=ustc
+export DEBUG
+export SITE
+while true; do
+        date
+        bash runhttpcheck.sh
+        git pull
+        echo sleep 30
+        sleep 30
+done
+```
 
 ### 查看结果
 
