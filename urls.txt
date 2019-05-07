@@ -4,3 +4,4 @@ www.pku.edu.cn https://www.pku.edu.cn/img/news/2e752c579df24e3abd5c81439006c947.
 www.sjtu.edu.cn https://www.sjtu.edu.cn/resource/upload/201904/20190429_023250_474.jpg
 www.hit.edu.cn https://www.hit.edu.cn/_upload/article/images/db/0d/03e6bd5a47fa90a9e4ffb65b849f/e6408b92-d8ca-42df-bf89-1597ce8f7203.jpg
 www.xcvtc.edu.cn https://www.xcvtc.edu.cn/
+www.zs.xcvtc.edu.cn https://www.zs.xcvtc.edu.cn/
