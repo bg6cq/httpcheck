@@ -1,13 +1,13 @@
-#url尽量选择100KB左右的图片文件
-www.ustc.edu.cn https://www.ustc.edu.cn/_upload/tpl/00/76/118/template118/res/globe.png
-www.tsinghua.edu.cn https://www.tsinghua.edu.cn/publish/thu2018/font/icon.woff2
-www.pku.edu.cn https://www.pku.edu.cn/img/news/88fff321ced441968423471a2595bd76.jpg
-www.sjtu.edu.cn https://www.sjtu.edu.cn/resource/upload/201904/20190430_025110_104.jpg
-www.zju.edu.cn http://www.zju.edu.cn/_upload/article/images/ee/de/5b1b9e404fdfa87ecf59dd848743/ddd37702-bfef-4333-89fa-94fff15fd752_s.jpg
-www.fudan.edu.cn http://www.fudan.edu.cn/2016/imgs/20160824d.jpg
-www.hit.edu.cn https://www.hit.edu.cn/_upload/article/images/db/0d/03e6bd5a47fa90a9e4ffb65b849f/e6408b92-d8ca-42df-bf89-1597ce8f7203.jpg
-www.nju.edu.cn https://www.nju.edu.cn/_upload/article/images/f9/c8/56f5e35248378653567e9d8ae398/68fbe224-98e3-46d8-b78e-4560936e6735.jpg
-www.xjtu.edu.cn http://www.xjtu.edu.cn/images/14/12/11/1tf5znre9c/2019050602.jpg
+#url尽量选择500KB左右的图片文件
+www.ustc.edu.cn https://www.ustc.edu.cn/_upload/article/images/17/e1/ee4b5ff14638ace7a1d8f149e4c8/W020111025323969996504.png
+www.tsinghua.edu.cn https://www.tsinghua.edu.cn/publish/thu2018/12031/20190429150919886560713/20190503065249979365666.jpg
+www.pku.edu.cn https://www.pku.edu.cn/images/content/2019-05/20190504221013750682.jpg
+www.sjtu.edu.cn https://www.sjtu.edu.cn/resource/upload/201904/20190429_021503_628.jpg
+www.zju.edu.cn http://www.zju.edu.cn/_upload/article/images/5f/cf/bb95e0f64feab2d04209db15ee13/c530f85b-f404-4f40-9b46-b3772e540ac0.jpg
+www.fudan.edu.cn http://www.fudan.edu.cn/files/slider/1920/1457.jpg
+www.hit.edu.cn http://www.hit.edu.cn/_upload/article/images/1d/a3/a4fadc444265acc4d52187808806/856dadb5-1dc8-472a-a656-dbf5a575e8b4.jpg
+www.nju.edu.cn https://www.nju.edu.cn/_upload/article/images/6e/50/94c71d314c6ab0d168e3eace12bd/6bd7e24e-9126-459c-9558-d2d46ce4d0cb.jpg
+www.xjtu.edu.cn http://www.xjtu.edu.cn/images/14/12/11/1tf5znre9c/20190506011.jpg
 www.xcvtc.edu.cn https://www.xcvtc.edu.cn/
 www.zs.xcvtc.edu.cn https://www.zs.xcvtc.edu.cn/
 www.hefei.gov.cn http://www.hefei.gov.cn/
