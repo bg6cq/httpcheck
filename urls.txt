@@ -12,3 +12,4 @@ www.xcvtc.edu.cn https://www.xcvtc.edu.cn/u/cms/www/201707/04164746csmp.jpg
 www.zs.xcvtc.edu.cn https://www.zs.xcvtc.edu.cn/images/banner.jpg
 www.hefei.gov.cn http://www.hefei.gov.cn/
 www.dlmu.edu.cn https://www.dlmu.edu.cn/images/2019042902.jpg
+www.hust.edu.cn http://www.hust.edu.cn/images/gongwe.jpg
