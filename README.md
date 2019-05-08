@@ -21,12 +21,15 @@
 
 ```
 docker pull bg6cq/httpcheck
-docker run -e SITE=test -e SLEEP=60 -e DEBUG=1 -v /home/james/mykey:/keys --name http_check bg6cq/httpcheck
+docker run -e SITE=test -e SLEEP=60 -e DEBUG=1 \
+    -v /home/james/mykey:/keys \
+    --name http_check bg6cq/httpcheck
 ```
-SITE是测试站点缩写
-SLEEP是一轮测试后sleep时间，建议30或60
+* SITE是测试站点缩写
+* SLEEP是一轮测试后sleep时间，建议30或60
 
-如果看到类似以下的信息，说明运行正常：
+如果看到类似以下的信息，说明运行正常。如果 gpg result: 不是0，一般是公钥没有在服务器上。
+
 ```
 hostname: www.xjtu.edu.cn
 url: http://www.xjtu.edu.cn/images/14/12/11/1tf5znre9c/20190506011.jpg
@@ -35,13 +38,12 @@ gpg result: 0<br>
 www,site=test,host=www.xjtu.edu.cn code=10,dns_time=0.0005,connect_time=0.0424,response_time=0.0425,transfer_time=0.2146,content_len=275655,transfer_rate=1284626<br>
 send to influx result:string(0) ""
 ```
-这时，切换另一个终端，执行以下命令停止并删除，重新放到后台执行
+这时，切换另一个终端，执行以下命令停止并删除之前的，重新执行放到后台运行。
 ```
 docker container stop http_check
 docker container rm http_check
 docker run -d -e SITE=test -e SLEEP=60 -v /home/james/mykey:/keys --name http_check bg6cq/httpcheck
 ```
-这样就可以在后台运行。
 
 执行以下命令，可以在httpcheck docker更新时，自动下载更新并重启运行：
 
@@ -87,8 +89,8 @@ Name-Email: httptest@ustc.edu.cn
 Expire-Date:0
 EOF
 
-gpg2 --export-secret-key --armor > mykey.txt
-gpg2 --export --armor > my-public-key.txt
+gpg --export-secret-key --armor > mykey.txt
+gpg --export --armor > my-public-key.txt
 ```
 
 获得的mykey.txt是私钥，自己留着；my-pubic-key.txt是公钥，发给我即可。
@@ -148,7 +150,6 @@ generator a better chance to gain enough entropy.
 Not enough random bytes available.  Please do some other work to give
 the OS a chance to collect more entropy! (Need 189 more bytes)
 ```
-
 
 最后一步可能需要等一段时间以生成密钥。
 
