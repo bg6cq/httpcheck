@@ -13,6 +13,46 @@
 | USTCCU     | 中国科学技术大学 联通出口    |
 | XCVTC      | 宣城职业技术学院             |
 
+### docker 运行方式
+
+1. 参照下面gpg --gen-key 生成自己的密钥 mykey.txt，假定放在目录 /home/james/mykey/mykey.txt。 my-public-key.txt 请发给我。
+
+2. 运行以下命令（请修改SITE=??? -v home/james/mykey 这2个地方）
+
+```
+docker pull bg6cq/httpcheck
+docker run -e SITE=test -e SLEEP=60 -e DEBUG=1 -v /home/james/mykey:/keys --name http_check bg6cq/httpcheck
+```
+SITE是测试站点缩写
+SLEEP是一轮测试后sleep时间，建议30或60
+
+如果看到类似以下的信息，说明运行正常：
+```
+hostname: www.xjtu.edu.cn
+url: http://www.xjtu.edu.cn/images/14/12/11/1tf5znre9c/20190506011.jpg
+result:www,site=test,host=www.xjtu.edu.cn code=10,dns_time=0.0005,connect_time=0.0424,response_time=0.0425,transfer_time=0.2146,content_len=275655,transfer_rate=1284626
+gpg result: 0<br>
+www,site=test,host=www.xjtu.edu.cn code=10,dns_time=0.0005,connect_time=0.0424,response_time=0.0425,transfer_time=0.2146,content_len=275655,transfer_rate=1284626<br>
+send to influx result:string(0) ""
+```
+这时，切换另一个终端，执行以下命令停止并删除，重新放到后台执行
+```
+docker container stop http_check
+docker container rm http_check
+docker run -d -e SITE=test -e SLEEP=60 -v /home/james/mykey:/keys --name http_check bg6cq/httpcheck
+```
+这样就可以在后台运行。
+
+执行以下命令，可以在httpcheck docker更新时，自动下载更新并重启运行：
+
+```
+docker pull containrrr/watchtower
+docker run -d \
+  --name watchtower \
+  -v /var/run/docker.sock:/var/run/docker.sock \
+  containrrr/watchtower http_check
+```
+
 ### 工作原理：
 
 1. 结果收集服务器
@@ -32,6 +72,28 @@
 #### 1. 创建一个独立的用户，专门用于运行测试程序
 
 #### 2. 以该用户的身份，执行`gpg --gen-key`命令生成gpg密钥
+
+最简单方式，稍微修改以下脚本中的Name-Real Name-Email:
+
+```
+gpg --batch --gen-key <<EOF
+%no-protection
+Key-Type:1
+Key-Length:1024
+Subkey-Type:1
+Subkey-Length:1024
+Name-Real: HTTPtest USTC
+Name-Email: httptest@ustc.edu.cn
+Expire-Date:0
+EOF
+
+gpg2 --export-secret-key --armor > mykey.txt
+gpg2 --export --armor > my-public-key.txt
+```
+
+获得的mykey.txt是私钥，自己留着；my-pubic-key.txt是公钥，发给我即可。
+
+下面是手工执行的方式：
 
 注意：为了工作方便，提示输入私钥密码时，请输入2次回车，不使用密码。这也是使用一个独立用户运行测试的原因。
 
