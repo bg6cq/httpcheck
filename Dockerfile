@@ -11,14 +11,15 @@ RUN echo '' > /etc/apk/repositories && \
     echo "202.38.95.110     mirrors.ustc.edu.cn"               >> /etc/hosts && \
     echo "Asia/Shanghai" > /etc/timezone
 
-ADD urls.txt /
 ADD httptest/httptest.c /httptest/httptest.c
-ADD run.docker.sh /run.sh
-ADD runhttpcheck.sh /
 
 RUN apk --no-cache add gnupg haveged tini bash curl openssl gcc openssl-dev libgcc libstdc++ linux-headers musl-dev && \
   gcc -o httptest/httptest httptest/httptest.c -lssl -lcrypto && \
   apk del gcc openssl-dev libgcc libstdc++ linux-headers musl-dev
+
+COPY urls.txt /
+COPY run.docker.sh /run.sh
+COPY runhttpcheck.sh /
 
 ENTRYPOINT ["/sbin/tini", "--", "/run.sh"]
 
