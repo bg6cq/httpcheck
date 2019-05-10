@@ -35,6 +35,16 @@ docker run -e SITE=test -e SLEEP=60 -e DEBUG=1 \
 
 如果看到类似以下的信息，说明运行正常。如果 gpg result: 不是0，一般是公钥没有在服务器上。
 
+如果运行时，明明提供了mykey.txt，但是提示“You must provide /keys/mykey.txt"，可能是docker 没有权限读mykey.txt，特别centos 启用SElinux后，
+会有特殊的权限。这时可以执行`setenforce 0`禁用SELinux。
+
+如果出现错误，每次需要执行以下命令删除重来：
+```
+docker container stop http_check
+docker container rm http_check
+```
+
+
 ```
 hostname: www.xjtu.edu.cn
 url: http://www.xjtu.edu.cn/images/14/12/11/1tf5znre9c/20190506011.jpg
