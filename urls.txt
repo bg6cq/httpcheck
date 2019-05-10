@@ -13,3 +13,4 @@ www.zs.xcvtc.edu.cn https://www.zs.xcvtc.edu.cn/images/banner.jpg
 www.hefei.gov.cn http://www.hefei.gov.cn/
 www.dlmu.edu.cn https://www.dlmu.edu.cn/images/2019042902.jpg
 www.hust.edu.cn http://www.hust.edu.cn/images/gongwe.jpg
+www.fjut.edu.cn https://www.fjut.edu.cn/_upload/tpl/00/7e/126/template126/images/bannerPic/t59.png
