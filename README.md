@@ -17,6 +17,11 @@
 | HUST       | 华中科技大学                 |
 | SEA        | 华盛顿大学（西雅图）         |
 | FJUT       | 福建工程学院                 |
+| ca-yifan   | 美国加州                     |
+
+### 测试结果例子
+
+www,SITE=USTC,host=www.pku.edu.cn code=10,dns_time=0.01,connect_time=0.01,response_time=0.01,content_len=10000,transfer_time=0.1,ttansfer_rate=1000
 
 ### docker 运行方式
 
