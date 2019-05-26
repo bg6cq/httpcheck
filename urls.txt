@@ -1,6 +1,6 @@
 #url尽量选择500KB左右的图片文件
 www.ustc.edu.cn https://www.ustc.edu.cn/.well-known/test.png
-www.tsinghua.edu.cn https://www.tsinghua.edu.cn/publish/thu2018/12031/20190429150919886560713/20190503065249979365666.jpg
+www.tsinghua.edu.cn https://www.tsinghua.edu.cn/publish/thu2018en/11490/20190514123145278682465/20190514123259685120480.jpg
 www.pku.edu.cn https://www.pku.edu.cn/images/content/2019-05/20190504221013750682.jpg
 www.sjtu.edu.cn https://www.sjtu.edu.cn/resource/upload/201904/20190429_021503_628.jpg
 www.zju.edu.cn http://www.zju.edu.cn/_upload/article/images/5f/cf/bb95e0f64feab2d04209db15ee13/c530f85b-f404-4f40-9b46-b3772e540ac0.jpg
